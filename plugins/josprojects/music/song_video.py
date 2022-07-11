@@ -257,7 +257,7 @@ async def vsong(client, message: Message):
         message.chat.id, f"**🔎 thappi nokkatte..** `{urlissed}`", reply_to_message_id=reply_id
     )
     if not urlissed:
-        await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
+        await pablo.edit("use /video + name of video in youtube \neg : video pottan by dabzee \nuse /song + song name \neg: /song chathiyan by dabzee")
         return
 
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
