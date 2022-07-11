@@ -45,7 +45,7 @@ def a(client, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply(f"**🔎 Searching..** `{urlissed}`", reply_to_message_id=reply_id)
+    m = message.reply(f"**🔎 thappi nokkatte** `{urlissed}`", reply_to_message_id=reply_id)
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -99,7 +99,7 @@ def a(client, message: Message):
         m.delete()
         message.delete()
     except Exception as e:
-        m.edit('**An Error Occured. Please Report This To @JOSPSupport !!**')
+        m.edit('**this feature is under work by @plk32 !!**')
         print(e)
     try:
         os.remove(audio_file)
@@ -254,7 +254,7 @@ async def vsong(client, message: Message):
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
 
     pablo = await client.send_message(
-        message.chat.id, f"**🔎 Searching..** `{urlissed}`", reply_to_message_id=reply_id
+        message.chat.id, f"**🔎 thappi nokkatte..** `{urlissed}`", reply_to_message_id=reply_id
     )
     if not urlissed:
         await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
