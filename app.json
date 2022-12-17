@@ -71,6 +71,8 @@
     "addons": [],
     "buildpacks": [{
         "url": "heroku/python"
+        "url": "https://github.com/Scalingo/python-buildpack.git"
+        "url":  "https://github.com/Scalingo/nodejs-buildpack.git"
     }],
     "formation": {
         "worker": {
