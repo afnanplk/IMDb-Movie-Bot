@@ -70,7 +70,7 @@
     },
     "addons": [],
     "buildpacks": [{
-        "url": "Scalingo/python"
+        "url": "https://github.com/Scalingo/python-buildpack.git"
     }],
     "formation": {
         "worker": {
