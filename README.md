@@ -59,6 +59,8 @@ You can deploy this bot anywhere.
 </p>
 </details>
 
+<a href="https://my.scalingo.com/deploy?template=https://github.com/afnanplk/IMDb-Movie-Bot" rel="nofollow"> <img src="https://camo.githubusercontent.com/842455c53346f891b760d421be4fba68d95a13a3ba9399c8ada3c9b879cb4ccf/68747470733a2f2f63646e2e7363616c696e676f2e636f6d2f6465706c6f792f627574746f6e2e737667" width="220" height="38.45" data-canonical-src="https://cdn.scalingo.com/deploy/button.svg" style="max-width: 100%;"></a>
+
 <details>
   <summary><b>Deploy to Railway</b></summary>
 <br/>
