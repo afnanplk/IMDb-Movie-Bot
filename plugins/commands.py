@@ -23,15 +23,18 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('⭕️ Updates ⭕️', url='https://t.me/josprojects')
-            ],
-            [
                 InlineKeyboardButton('🛠️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
                 InlineKeyboardButton('Close ✗', callback_data="close_data"),
             ]
             ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAJ1k2IfDr7l8Hat1d-s1mnbBEsFXZWJAAL5BAACAdz5VOVw2x38ZZJ1HgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
+                reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            quote=True,
+            parse_mode='html'
+        )
         await asyncio.sleep(60)
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
