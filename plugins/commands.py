@@ -20,10 +20,10 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
-   if message.chat.type in ['group', 'supergroup']:
+    if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('⭕️ Updates ⭕️', url='http://commentpics.in/wp-content/uploads/2014/01/11.jpg')
+                InlineKeyboardButton('⭕️ Updates ⭕️', url='https://www.memezero.com/media/memes/32.jpg')
             ],
             [
                 InlineKeyboardButton('🛠️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -31,7 +31,7 @@ async def start(client, message):
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAEbQrNjpGOplMPgye25HlLn3FBHU9MJjAACowgAApJQKFWbxMlTcjKF_ywE', reply_markup=reply_markup, reply_to_message_id=message.message_id)
+        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAJ1k2IfDr7l8Hat1d-s1mnbBEsFXZWJAAL5BAACAdz5VOVw2x38ZZJ1HgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
         await asyncio.sleep(60)
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
