@@ -10,6 +10,7 @@ gTTS
 asyncio==3.4.3
 aiohttp==3.7.4
 aiofiles
+gunicorn==19.7.1
 requests
 pyshorteners
 bs4
