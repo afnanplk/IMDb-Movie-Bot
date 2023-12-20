@@ -6,7 +6,6 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN npm i gunicorn
 RUN mkdir /IMDb-Movie-Bot
 WORKDIR /IMDb-Movie-Bot
 COPY start.sh /start.sh
